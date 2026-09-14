@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Work Sans", sans-serif;
+    background: var(--Purple-100) url('../assets/images/background-pattern-desktop.svg') no-repeat;
+    background-size: 100% auto;
+    color: var(--Purple-950);
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 2rem; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.player-card{
+    background: var(--White);
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+
+    width: 100%;
+    max-width: 450px;
+}
+
+.card-header{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-card-header{
+    width: 24px;
+    height: auto;
+}
+
+.what{
+    width: 100%;
+    border-bottom: 1px solid rgba(97, 94, 94, 0.1); 
+}
+
+.what:last-child {
+    border-bottom: none;
+}
+
+.btn-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--Purple-950)
+}
+
+.btn-question:hover{
+    color: #B500FF;
+}
+
+.btn-question img{
+    width: 24px;
+    height: auto;
+}
+
+.texto {
+    display: none; 
+    color: var(--Purple-600);
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('../assets/images/background-pattern-mobile.svg');
+        background-size: 100% auto;
+    }
+}
